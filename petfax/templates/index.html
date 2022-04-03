@@ -10,7 +10,7 @@
     <title>Petfax</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../static/style.css">
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -21,7 +21,7 @@
     {% for pet in pets %}
       <h2>{{pet.pet_name}}</h2>
       <img src="{{pet.pet_photo}}" alt="Photo of pet" />
-      <a href="/{{pet.pet_id}}">Learn More</a>
+      <a href="{{pet.pet_id}}">Learn More</a>
     {% endfor %}
     <!-- <script src="" async defer></script> -->
   </body>

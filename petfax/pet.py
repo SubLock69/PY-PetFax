@@ -11,6 +11,6 @@ def index():
   return render_template('index.html', pets=pets)
 
 @bp.route('/<id>')
-def show():
-  return render_template('showPet.html', pet=pets[id-1])
+def show(id):
+  return render_template('showPet.html', pet=pets[int(id)-1])
 
