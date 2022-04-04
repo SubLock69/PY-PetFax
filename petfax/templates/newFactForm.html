@@ -8,11 +8,15 @@
   <title>New Fact</title>
 </head>
 <body>
-  <form method="POST" action="/facts/new">
+  <!--THANK YOU TO DAVID LANDUP FOR SHOWING ME HOW TO ENCODE THE FORM FOR FLASK-->
+  <!--
+    https://stackabuse.com/how-to-get-and-parse-http-post-body-in-flask-json-and-form-data/
+  -->
+  <form action="/facts" enctype="multipart/form-data" method="post">
     <label for="fact">New Fact:</label>
     <input type="text" id="fact" name="fact" /><br>
     <label for="submitter">Submitter:</label>
-    <input type="text" id="submitter" name="submitter" />
+    <input type="text" id="submitter" name="submitter" value="anon" />
     <input type="submit" />
   </form>
 </body>
