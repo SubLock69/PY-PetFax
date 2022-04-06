@@ -15,7 +15,8 @@ def factIndex():
     models.db.session.commit()
     return redirect('/facts')
 
-  return render_template('facts/index.html', facts=[])
+  facts = models.Fact.query.all()
+  return render_template('facts/index.html', facts=facts)
 
 #Show new fact form
 @bp.route('/new')

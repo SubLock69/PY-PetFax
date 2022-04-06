@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/style.css">
-  <title>New Fact</title>
-</head>
-<body>
-  <!--THANK YOU TO DAVID LANDUP FOR SHOWING ME HOW TO ENCODE THE FORM FOR FLASK-->
-  <!--
-    https://stackabuse.com/how-to-get-and-parse-http-post-body-in-flask-json-and-form-data/
-  -->
+{%extends "wrap.html"%}
+
+{%block title%}New Fact{%endblock%}
+{%block head%}
+{{super()}}
+{%endblock%}
+
+{%block content%}
+
   <form action="/facts" enctype="multipart/form-data" method="post">
     <label for="fact">New Fact:</label>
     <input type="text" id="fact" name="fact" /><br>
@@ -19,5 +14,5 @@
     <input type="text" id="submitter" name="submitter" value="anon" />
     <input type="submit" />
   </form>
-</body>
-</html>
+
+{%endblock%}
